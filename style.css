@@ -25,9 +25,9 @@ a:hover {
 }
 
 body {
-    flex-direction: column;
     margin: 0;
     display: flex;
+    place-items: center;
     min-width: 320px;
     min-height: 100vh;
 }
@@ -75,44 +75,45 @@ button:focus-visible {
     }
 }
 
-
-
-#header {
-    text-align: center;
+.btn {
+    background-color: lightgreen;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.content {
-    list-style: square;
-}
-
-.content li:nth-child(4) a {
-    color: red;
-}
-
-section,
-article {
-    height: 100vh;
-}
-
-section {
+.modal {
     width: 100%;
-}
-
-article {
-    padding: 0px 35px;
-}
-
-.pages article:nth-child(2n) h2,
-.pages article:nth-child(2n) p {
-    text-align: right;
-}
-
-.home {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-}
-
-#home:target .home {
+    height: 100%;
+    left: 0;
+    top: 0;
     display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+}
+
+.modal:target {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.closed {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.closed>a {
+    text-decoration: none;
+    padding: 10px;
 }
