@@ -1,0 +1,42 @@
+.btn {
+    background-color: lightgreen;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+}
+
+.modal:target {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.closed {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.closed>a {
+    text-decoration: none;
+    padding: 10px;
+}

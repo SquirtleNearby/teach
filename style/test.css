@@ -1,0 +1,15 @@
+.block:hover {
+    background-color: red;
+}
+
+.block {
+    background-color: green;
+    position: relative;
+}
+
+.block::before {
+    content: "Hello ";
+    position: absolute;
+    top: 100%;
+    left: 0;
+}

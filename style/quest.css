@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+
+}
+
+.main-block {
+    margin: 0px;
+    width: 540px;
+    height: 597px;
+    border: 2px solid;
+    padding: 0 10px;
+}
+
+.line {
+    border-style: dotted;
+    border-width: 0px;
+    border-bottom-width: 9px;
+    border-color: purple;
+    height: 60px;
+}
+
+.text {
+    margin-top: 20px;
+    line-height: 25px;
+    padding-right: 5px;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+
+.info-block {
+    border-style: solid;
+    margin: 0px 0px 0px 0px;
+    height: 114px;
+    width: 519px;
+    border-width: 5px;
+    padding-bottom: 14px;
+    border-color: purple;
+}
+
+.info {
+    padding-top: 13px;
+    padding-left: 25px;
+    font-size: 18px;
+}
+
+.info li {
+    padding-bottom: 5px;
+}
+
+
+h1 {
+    padding-top: 13px;
+    padding-left: 0px;
+    font-size: 38px;
+    word-spacing: 5px;
+    color: pink;
+    font-weight: bold;
+}
+
+h2 {
+    padding-top: 12px;
+    font-size: 19px;
+    color: gray;
+}
+
+h3 {
+    margin: 0 0 10px 0;
+    font-size: 29px;
+    font-style: italic;
+    padding-bottom: 17px;
+}
+
+a:link {
+    color: green;
+}
+
+a:link#email {
+    color: yellow;
+}
