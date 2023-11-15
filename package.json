@@ -11,5 +11,8 @@
   "devDependencies": {
     "vite": "^4.4.5",
     "vite-plugin-handlebars": "^1.6.0"
+  },
+  "dependencies": {
+    "reset-css": "^5.0.2"
   }
 }

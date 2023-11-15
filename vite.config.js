@@ -1,5 +1,4 @@
 import { resolve } from 'path';
-import handlebars from 'vite-plugin-handlebars';
 
 const pageData = {
     '/index.html': {
