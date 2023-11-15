@@ -1,85 +1,48 @@
-body {
+:root {
+    --radio-size: 16px;
+    --radio-border-size: 1px;
+}
+
+.custom-radio {
     position: relative;
 }
 
-
-#female,
-#male {
+.custom-radio .custom-radio__input {
     appearance: none;
 }
 
-.custom-radio-male,
-.custom-radio-female {
-    padding-left: 5px;
+.custom-radio .custom-radio__label {
+    padding-left: calc(var(--radio-size) + 5px);
     user-select: none;
+    cursor: pointer;
 }
 
-.custom-radio-male::before {
+.custom-radio .custom-radio__label::before {
     content: "";
     position: absolute;
     display: block;
     background-image: url(svg/check-circle.svg);
-    width: 64px;
-    height: 64px;
-    top: 10px;
-    left: -25px;
+    background-size: var(--radio-size);
+    width: var(--radio-size);
+    height: var(--radio-size);
+    top: var(--radio-border-size);
+    left: var(--radio-border-size);
     opacity: 0;
     transition: opacity 0.2s linear;
 }
 
-.custom-radio-male::after {
+.custom-radio .custom-radio__label::after {
     content: "";
     display: block;
     position: absolute;
-    width: 16px;
-    height: 16px;
-    top: 33px;
-    left: -2px;
-    border: 1px solid black;
+    width: var(--radio-size);
+    height: var(--radio-size);
+    top: 0;
+    left: 0;
+    border: var(--radio-border-size) solid black;
     border-radius: 50%;
-    transition: opacity 0.2s linear;
-    opacity: 1;
 }
 
-#male:checked+.custom-radio-male::after {
-    opacity: 0;
-}
-
-#male:checked+.custom-radio-male::before {
-    opacity: 1;
-}
-
-.custom-radio-female::before {
-    content: "";
-    position: absolute;
-    display: block;
-    background-image: url(svg/check-circle.svg);
-    width: 64px;
-    height: 64px;
-    top: 10px;
-    left: 30px;
-    opacity: 0;
-    transition: opacity 0.2s linear;
-}
-
-.custom-radio-female::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    top: 33px;
-    left: 53px;
-    border: 1px solid black;
-    border-radius: 50%;
-    transition: opacity 0.2s linear;
-    opacity: 1;
-}
-
-#female:checked+.custom-radio-female::after {
-    opacity: 0;
-}
-
-#female:checked+.custom-radio-female::before {
+.custom-radio .custom-radio__input:checked+.custom-radio__label::before {
     opacity: 1;
 }

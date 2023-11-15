@@ -9,12 +9,14 @@
 
   <body>
     <p>Выберите пол:</p>
-      <input type="radio" id="male" name="gender" >
-      <label for="male" class="custom-radio-male">Муж</label>
-      <input type="radio" id="female" name="gender" >
-      <label for="female" class="custom-radio-female">Жен</label>
-    
-    
+    <div class="custom-radio">
+      <input type="radio" id="male" name="gender" class="custom-radio__input">
+      <label for="male" class="custom-radio__label">Муж</label>
+    </div>
+    <div class="custom-radio">
+      <input type="radio" id="female" name="gender" class="custom-radio__input">
+      <label for="female" class="custom-radio__label">Жен</label>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
