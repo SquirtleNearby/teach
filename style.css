@@ -2,12 +2,84 @@ body {
     position: relative;
 }
 
-.custom-radio::before {
-    content: url("svg/check-circle-fill-svgrepo-com\ \(1\).svg");
-    position: absolute;
-}
 
 #female,
 #male {
+    appearance: none;
+}
+
+.custom-radio-male,
+.custom-radio-female {
+    padding-left: 5px;
+    user-select: none;
+}
+
+.custom-radio-male::before {
     content: "";
+    position: absolute;
+    display: block;
+    background-image: url(svg/check-circle.svg);
+    width: 64px;
+    height: 64px;
+    top: 10px;
+    left: -25px;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+
+.custom-radio-male::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 33px;
+    left: -2px;
+    border: 1px solid black;
+    border-radius: 50%;
+    transition: opacity 0.2s linear;
+    opacity: 1;
+}
+
+#male:checked+.custom-radio-male::after {
+    opacity: 0;
+}
+
+#male:checked+.custom-radio-male::before {
+    opacity: 1;
+}
+
+.custom-radio-female::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url(svg/check-circle.svg);
+    width: 64px;
+    height: 64px;
+    top: 10px;
+    left: 30px;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+
+.custom-radio-female::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 33px;
+    left: 53px;
+    border: 1px solid black;
+    border-radius: 50%;
+    transition: opacity 0.2s linear;
+    opacity: 1;
+}
+
+#female:checked+.custom-radio-female::after {
+    opacity: 0;
+}
+
+#female:checked+.custom-radio-female::before {
+    opacity: 1;
 }
