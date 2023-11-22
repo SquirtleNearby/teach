@@ -223,3 +223,36 @@ header {
 #main__div_products_link_after {
   padding-bottom: 35px;
 }
+
+.main__slider_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.main__slider_content_title {
+  font-weight: 700;
+  font-size: 30px;
+
+  font-family: 'Cardo', serif;
+  padding-bottom: 20px;
+}
+
+.main__slider_content_text {
+  font-weight: 400;
+  font-size: 18px;
+
+  font-family: 'Cardo', serif;
+  padding-bottom: 20px;
+}
+
+.main__slider_content_img_block {
+  display: flex;
+  justify-content: center;
+}
+
+.main__slider_content_img {
+  width: 30%;
+  padding: 0 5px;
+}
