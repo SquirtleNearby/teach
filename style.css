@@ -113,3 +113,13 @@ header {
 .main__achivements_block_list_content p {
   padding-left: 10px;
 }
+
+.main__bg_photo {
+  display: flex;
+  height: auto;
+}
+
+.main__bg_photo_img {
+  width: 100%;
+  height: auto;
+}
