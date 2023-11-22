@@ -1,0 +1,33 @@
+header {
+  height: 105px;
+}
+
+.header__title {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+  height: 69px;
+}
+
+.header__title_content {
+  position: absolute;
+  display: flex;
+}
+
+.header__menu {
+  justify-content: flex-start;
+  margin-right: auto;
+}
+
+.header__menu a {
+  padding: 20px;
+
+  text-decoration: none;
+  color: black;
+  font-family: 'Cardo', serif;
+
+  font-weight: 400;
+  font-size: 17px;
+}
