@@ -7,6 +7,7 @@ header {
   position: relative;
   justify-content: center;
   align-items: center;
+
   height: 69px;
 }
 
@@ -21,8 +22,64 @@ header {
 }
 
 .header__menu a {
+  padding: 20px;
+
   text-decoration: none;
   color: black;
-  padding: 20px;
   font-family: 'Cardo', serif;
+}
+
+.main__div {
+  height: 698px;
+  width: 100%;
+
+  background-image: url(img/bg-main.png);
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+}
+
+.main__div_text {
+  font-weight: 700;
+  font-size: 27px;
+
+  text-align: center;
+
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+}
+
+.main__div_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 204px;
+  height: 33px;
+
+  font-family: 'Cardo', serif;
+  text-decoration: none;
+  color: #ffffff;
+  border: #ffffff solid 1px;
+}
+
+.main__div_question {
+  position: absolute;
+  display: flex;
+  bottom: 2px;
+  left: 20px;
+  width: 324px;
+  height: 50px;
+
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Times New Roman', Times, serif;
+  color: #ffffff;
 }
