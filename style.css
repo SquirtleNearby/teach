@@ -27,6 +27,9 @@ header {
   text-decoration: none;
   color: black;
   font-family: 'Cardo', serif;
+
+  font-weight: 400;
+  font-size: 17px;
 }
 
 .main__div {
