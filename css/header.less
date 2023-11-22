@@ -1,23 +1,20 @@
+@header-padding: 16px;
+
 .header {
-  height: 105px;
+  height: calc(105px - (@header-padding * 2));
+  padding: @header-padding 20px;
   &-title {
-    display: flex;
-    position: relative;
-    justify-content: center;
+    display: grid;
     align-items: center;
-  
-    height: 69px;
-    &__content {
-      position: absolute;
-      display: flex;
+    grid-template-columns: 1fr 190px 1fr;
+    &__content img {
+      height: 36px;
     }
   }
   &-menu {
-    justify-content: flex-start;
-    margin-right: auto;
+    display: flex;
+    column-gap: 20px;
     a {
-      padding: 20px;
-  
       text-decoration: none;
       color: black;
       font-family: 'Cardo', serif;
