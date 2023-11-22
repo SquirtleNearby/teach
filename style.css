@@ -50,6 +50,7 @@ header {
 .main__div_text {
   font-weight: 700;
   font-size: 27px;
+  width: 807px;
 
   text-align: center;
 
@@ -85,4 +86,30 @@ header {
 
   font-family: 'Times New Roman', Times, serif;
   color: #ffffff;
+}
+
+.main__achivements_block {
+  width: 100%;
+  height: 155px;
+
+}
+
+.main__achivements_block_list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.main__achivements_block_list_content {
+  display: flex;
+  align-items: center;
+}
+
+.main__achivements_block_list_content p {
+  padding-left: 10px;
 }
