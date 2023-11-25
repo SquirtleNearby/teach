@@ -1,17 +1,16 @@
 @header-padding: 16px;
 
 .header {
-  height: calc(105px - (@header-padding * 2));
-  padding: @header-padding 20px;
-  &-title {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 190px 1fr;
-    &__content img {
-      height: 36px;
-    }
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 20px;
+  &-logo img {
+    height: 36px;
   }
   &-menu {
+    flex-wrap: wrap;
+    justify-content: center;
     display: flex;
     column-gap: 20px;
     a {
@@ -22,5 +21,15 @@
       font-weight: 400;
       font-size: 17px;
     }
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    height: calc(105px - (@header-padding * 2));
+    padding: @header-padding 20px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 190px 1fr;
   }
 }

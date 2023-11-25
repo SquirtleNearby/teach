@@ -1,123 +1,200 @@
 body {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
+
+@pc: 1024px;
+@table: 768px;
+
 .achivements {
   width: 100%;
-  height: 155px;  
+  padding: 10px 0;
   &-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    height: 100%;
+    flex-wrap: wrap;
 
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 13px;
+    row-gap: 10px;
     &__content {
       display: flex;
       align-items: center;
-      
+      justify-content: center;
+      flex-basis: 50%;
+      column-gap: 10px;
       p {
-        padding-left: 10px;
+        text-align: center;
+      }
+    }
+  }
+  @media (min-width: @table) {
+    padding: 20px 0;
+    &-list__content {
+      flex-basis: 30%;
+    }
+  }
+
+  @media (min-width: @pc) {
+    padding: 62px 0;
+    &-list {
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      &__content {
+        flex-basis: auto;
       }
     }
   }
 }
 
 .bg {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   &__image {
-    width: 25%;
+    width: 100%;
+  }
+
+  @media (min-width: @table) {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .products {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 30px;
   margin-top: 30px;
-  &-container{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    &:nth-child(odd) {
-      flex-direction: row-reverse;
-      text-align: right;
-    }
+  ._favorite {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    font-family: "Cardo", serif;
+    color: #bc1414;
+
+    padding-left: 10px;
   }
-  &__image {
-    width: 66%;
-    height: auto;
-    max-height: 542px;
-    object-fit: cover;
+  &-container:not(:last-child) {
+    margin-bottom: 20px;
   }
   &__content {
-    width: 33%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-    vertical-align: middle;
-    padding: 0 20px;
+    font-weight: 400;
+    font-family: "Cardo", serif;
+  }
+  &__image {
+    width: 100%;
   }
   &__title {
     font-weight: 700;
-    font-size: 33px;
-  
-    font-family: 'Roboto', sans-serif;
-    padding-bottom: 20px;
-    
-  }
-  &__favorite {
-    font-weight: 400;
-    font-size: 14px;
-    font-style: italic;
-
-    padding-bottom: 20px;
-    font-family: 'Cardo', serif;
-    color: #BC1414;
-  }
-  &__tag {
-    font-weight: 400;
-    font-size: 18px;
-
-    font-style: italic;
-    font-family: 'Cardo', serif;
-    padding-bottom: 20px;
-  }
-  &__price {
-    font-weight: 400;
-    font-size: 15px;
-
-    font-family: 'Cardo', serif;
-    padding-bottom: 10px;
-  }
-  &__description {
-    font-weight: 400;
-    font-size: 18px;
-    font-style: italic;
-
-    font-family: 'Cardo', serif;
-    padding-bottom: 50px;
-  }
-  &__addition {
-    color: #54595F;
-    padding-bottom: 50px;
-  }
-  &__link {
-    font-weight: 400;
-    font-size: 17px;
-
-    font-family: 'Roboto', sans-serif;
-    text-decoration: none;
-    color: black;
-    border-bottom: black solid 2px;
-    &_after {
-      padding-bottom: 35px;
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 10px;
+    &_new::after {
+      content: "New Favorite!";
+      ._favorite();
     }
   }
+
+  &__favorite {
+    display: none;
+  }
+  &__tag {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+  &__price {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  &__description {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+  &__addition {
+    color: #54595f;
+  }
+  &__link {
+    font-size: 17px;
+
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid black;
+  }
   &__marks {
-    width: 230px;;
+    display: block;
+  }
+
+  @media (min-width: @table) {
+    &-container {
+      display: flex;
+      column-gap: 20px;
+      &:nth-child(odd) {
+        flex-direction: row-reverse;
+        text-align: right;
+      }
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__title_new::after {
+      display: none;
+    }
+
+    &__favorite {
+      display: block;
+      padding-bottom: 10px;
+      ._favorite();
+    }
+    &__image {
+      width: 50%;
+    }
+    &__link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 0 5px;
+    }
+    &__marks {
+      margin-top: 5px;
+    }
+  }
+  @media (min-width: @pc) {
+    &-container {
+      column-gap: 48px;
+      align-items: center;
+    }
+    &__title {
+      font-size: 32px;
+      margin-bottom: 4px;
+    }
+    &__tag {
+      line-height: 38px;
+      margin-bottom: 18px;
+    }
+    &__price {
+      line-height: 28px;
+      margin-bottom: 46px;
+    }
+    &__description {
+      margin-bottom: 25px;
+      max-width: 360px;
+    }
+    &__addition {
+      margin-bottom: 48px;
+    }
+    &__link {
+      margin-top: 0;
+    }
+    &__favorite {
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+    &__marks {
+      margin-top: 58px;
+    }
+    &__image {
+      width: 60%;
+    }
   }
 }
 
@@ -133,14 +210,14 @@ body {
       font-weight: 700;
       font-size: 30px;
 
-      font-family: 'Cardo', serif;
+      font-family: "Cardo", serif;
       padding-bottom: 20px;
     }
     &__text {
       font-weight: 400;
       font-size: 18px;
 
-      font-family: 'Cardo', serif;
+      font-family: "Cardo", serif;
       padding-bottom: 20px;
     }
   }
@@ -161,22 +238,22 @@ body {
     align-items: center;
     margin: 50px 0;
     flex-wrap: wrap;
-    background-color: #F6F6F6;
+    background-color: #f6f6f6;
   }
   &__text {
     font-weight: 400;
     font-style: italic;
     font-size: 20px;
-    font-family: 'Cardo', serif;
+    font-family: "Cardo", serif;
     text-align: center;
     margin-bottom: 30px;
   }
   &__author {
-    font-family: 'Cardo', serif;
+    font-family: "Cardo", serif;
     font-weight: 400;
     font-size: 15px;
     margin-bottom: 20px;
-  } 
+  }
   &-box {
     display: flex;
     flex-direction: row;
@@ -190,35 +267,55 @@ body {
 }
 
 .features {
-  display: flex;
-  &-content{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 15px;
+  &-content {
     text-align: center;
-    font-family: 'Cardo', serif;
+    font-family: "Cardo", serif;
     font-weight: 400;
-    width: 25%;
-    padding: 50px 32px;
-    background-color: #fff;
-    &:nth-child(even) {
-      background-color: #f8f8f8;
-    }
     &__image {
-      height: 95px;
-      width: 95px;
+      height: 50px;
+      width: 50px;
+      margin-bottom: 10px;
     }
     &__title {
-      margin-top: 30px;
       font-size: 24px;
+      margin-bottom: 5px;
     }
     &__description {
-      margin-top: 12px;
       font-size: 15px;
-      min-height: 80px;
+      margin-bottom: 5px;
+      min-height: 70px;
     }
     &__link {
-      display: block;
-      margin-top: 25px;
       color: black;
       font-size: 15px;
+    }
+  }
+
+  @media (min-width: @table) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: @pc) {
+    display: flex;
+    &-content {
+      padding: 50px 38px;
+      &:nth-child(even) {
+        background-color: #f8f8f8;
+      }
+      &__image {
+        height: 95px;
+        width: 95px;
+        margin-bottom: 30px;
+      }
+      &__title {
+        margin-bottom: 12px;
+      }
+      &__description {
+        margin-bottom: 26px;
+      }
     }
   }
 }
@@ -237,4 +334,3 @@ body {
     max-width: 1420px;
   }
 }
-
