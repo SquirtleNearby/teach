@@ -1,23 +1,40 @@
 .header {
-  font-family: "Jost", sans-serif;
-  &-block {
+  &-content {
     display: grid;
-    grid-template-columns: repeat(5, 1fr) auto;
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr) auto;
     align-items: center;
-    border: 2px solid black;
+
+    font-family: "Jost";
   }
   &-logo {
+    display: flex;
+    justify-content: flex-end;
   }
   &-link {
+    display: flex;
     grid-column: 2 / span 2;
     text-align: center;
-    border: 2px solid black;
+    margin-left: 30px;
+    column-gap: 20px;
+
+    font-weight: 400;
+    &__text {
+      text-decoration: none;
+      color: black;
+    }
   }
-  &__button {
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    padding: 20px;
+  &-buttons {
+    grid-column: 5 / span 1;
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+    column-gap: 20px;
+    &__buy {
+      padding: 15px 26px;
+
+      background-color: black;
+      color: white;
+      text-decoration: none;
+    }
   }
 }
