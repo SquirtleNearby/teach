@@ -2,22 +2,19 @@
   &-content {
     display: grid;
     grid-template-columns: repeat(4, 1fr) auto;
-    align-items: center;
-    margin: 20px 0px;
+    margin: 20px 60px;
 
+    font-size: 18px;
     font-family: "Jost";
   }
-  &-logo {
-    display: flex;
-    justify-content: flex-end;
-  }
+
   &-link {
     display: flex;
-    grid-column: 2 / span 2;
-    text-align: center;
-    margin-left: 30px;
+    grid-column: 0 / span 2;
+    align-items: center;
     column-gap: 20px;
 
+    text-wrap: nowrap;
     font-weight: 400;
     &__text {
       text-decoration: none;
@@ -25,11 +22,11 @@
     }
   }
   &-buttons {
-    grid-column: 5 / span 1;
+    grid-column: 2 / span 3;
     display: flex;
     align-items: center;
-    margin-right: 60px;
     column-gap: 20px;
+    justify-content: flex-end;
     &__buy {
       padding: 15px 26px;
 
